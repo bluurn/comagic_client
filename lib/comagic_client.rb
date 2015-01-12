@@ -81,13 +81,6 @@ class ComagicClient
     options.merge!({ session_key: @session_key }).not_nils!
     get 'v1/call', options
   end
-  
-  # Get stat
-  def stat(options = {})
-    require_auth!
-    options.merge!({ session_key: @session_key }).not_nils!
-    get 'v1/stat', options
-  end
 
   # Get chat
   def chat(options = {})
