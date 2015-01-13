@@ -1,3 +1,3 @@
 source "http://rubygems.org"
-ruby '2.0.0'
-gem 'rest_client'
+# Specify your gem's dependencies in comagic_client.gemspec
+gemspec
