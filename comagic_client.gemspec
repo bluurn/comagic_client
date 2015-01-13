@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'comagic_client'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.date = '2015-01-10'
   s.summary = 'Comagic API client'
   s.description = 'Comagic API client'
