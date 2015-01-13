@@ -9,4 +9,5 @@ Gem::Specification.new do |s|
   s.files = ['lib/comagic_client.rb']
   s.homepage = 'http://rubygems.org/gems/comagic_client'
   s.license = 'MIT'
+  s.add_dependency "rest_client"
 end
