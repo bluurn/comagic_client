@@ -137,6 +137,13 @@ class ComagicClient
     options.merge!({ session_key: @session_key }).not_nils!
     get 'v1/get_cdr_out', options
   end
+  
+  # Get customer_list
+  def customer_list(options = {})
+    require_auth!
+    options.merge!({ session_key: @session_key }).not_nils!
+    get 'v1/customer_list', options
+  end
 
   def create_site(options = {})
     require_auth!
