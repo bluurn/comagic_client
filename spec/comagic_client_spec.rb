@@ -7,7 +7,7 @@ describe ComagicClient do
 
   describe "login feature" do
     describe "with valid credentials" do
-      let!(:agency_connector) do
+      let(:agency_connector) do
         login = config['accounts']['agency']['login']
         password = config['accounts']['agency']['password']
         ComagicClient.new login, password
@@ -17,9 +17,13 @@ describe ComagicClient do
         expect(agency_connector.login).to be_an_instance_of(String)
       end
 
-      it "should logout" do
-
+      describe "logout feature" do
+        before { agency_connector.login }
+        it "should logout from service" do
+          expect(agency_connector.logout).to be_empty
+        end
       end
+
     end
 
     describe "with invalid credentials" do
