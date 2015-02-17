@@ -42,6 +42,16 @@ describe ComagicClient do
         end
       end
 
+
+      describe "tags feature" do
+        it 'should throw error with no options specified' do
+          expect{ agency_connector.tag }.to raise_error(ComagicClient::ApiError, /Access denied/)
+        end
+        it 'should get tags if customer_id is specified' do
+          expect(agency_connector.tag customer_id: config['accounts']['agency']['customer_id']).not_to be_empty
+        end
+      end
+
       it "should logout from service" do
         expect(agency_connector.logout).to be_empty
       end
