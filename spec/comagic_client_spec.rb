@@ -72,7 +72,15 @@ describe ComagicClient do
           expect(agency_connector.stat customer_id: config['accounts']['agency']['customer_id'], site_id: config['accounts']['agency']['site_id'], date_from: config['accounts']['agency']['date_from'], date_till: config['accounts']['agency']['date_till']).to be_a(Array)
         end
       end
-      
+      describe "goal feature" do
+        it "should throw error if no options specified" do
+          expect{agency_connector.goal}.to raise_error(ComagicClient::ApiError, /Missing required parameter/)
+        end
+
+        it "should return stats if all parameters given" do
+          expect(agency_connector.goal customer_id: config['accounts']['agency']['customer_id'], site_id: config['accounts']['agency']['site_id'], date_from: config['accounts']['agency']['date_from'], date_till: config['accounts']['agency']['date_till']).to be_a(Array)
+        end
+      end
       it "should logout from service" do
         expect(agency_connector.logout).to be_empty
       end
