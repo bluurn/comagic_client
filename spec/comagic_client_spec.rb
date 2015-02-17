@@ -42,10 +42,9 @@ describe ComagicClient do
         end
       end
 
-
       describe "tags feature" do
         it 'should throw error with no options specified' do
-          expect{ agency_connector.tag }.to raise_error(ComagicClient::ApiError, /Access denied/)
+          expect { agency_connector.tag }.to raise_error(ComagicClient::ApiError, /Access denied/)
         end
         it 'should get tags if customer_id is specified' do
           expect(agency_connector.tag customer_id: config['accounts']['agency']['customer_id']).to be_a(Array)
@@ -65,22 +64,50 @@ describe ComagicClient do
 
       describe "stat feature" do
         it "should throw error if no options specified" do
-          expect{agency_connector.stat}.to raise_error(ComagicClient::ApiError, /Missing required parameter/)
+          expect { agency_connector.stat }.to raise_error(ComagicClient::ApiError, /Missing required parameter/)
         end
 
         it "should return stats if all parameters given" do
           expect(agency_connector.stat customer_id: config['accounts']['agency']['customer_id'], site_id: config['accounts']['agency']['site_id'], date_from: config['accounts']['agency']['date_from'], date_till: config['accounts']['agency']['date_till']).to be_a(Array)
         end
       end
+
       describe "goal feature" do
         it "should throw error if no options specified" do
-          expect{agency_connector.goal}.to raise_error(ComagicClient::ApiError, /Missing required parameter/)
+          expect { agency_connector.goal }.to raise_error(ComagicClient::ApiError, /Missing required parameter/)
         end
 
         it "should return stats if all parameters given" do
           expect(agency_connector.goal customer_id: config['accounts']['agency']['customer_id'], site_id: config['accounts']['agency']['site_id'], date_from: config['accounts']['agency']['date_from'], date_till: config['accounts']['agency']['date_till']).to be_a(Array)
         end
       end
+
+
+      describe "call feature" do
+        it "should throw error if no options specified" do
+          expect { agency_connector.call }.to raise_error(ComagicClient::ApiError, /Missing required parameter/)
+        end
+
+        it "should return calls if all parameters given" do
+          expect(agency_connector.call customer_id: config['accounts']['agency']['customer_id'], site_id: config['accounts']['agency']['site_id'], date_from: config['accounts']['agency']['date_from'], date_till: config['accounts']['agency']['date_till']).to be_a(Array)
+        end
+      end
+
+      describe "chat feature" do
+        it "should throw error if no options specified" do
+          expect { agency_connector.chat }.to raise_error(ComagicClient::ApiError, /Access denied/)
+        end
+
+        it "should return chats if all parameters given" do
+          expect(agency_connector.chat customer_id: config['accounts']['agency']['customer_id'], site_id: config['accounts']['agency']['site_id'], date_from: config['accounts']['agency']['date_from'], date_till: config['accounts']['agency']['date_till']).to be_a(Array)
+        end
+      end
+
+      describe "chat_messages" do
+        skip "not implemented, need chats"
+      end
+
+
       it "should logout from service" do
         expect(agency_connector.logout).to be_empty
       end
