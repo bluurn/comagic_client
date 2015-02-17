@@ -107,12 +107,23 @@ describe ComagicClient do
         skip "not implemented, need chats"
       end
 
+      describe "offline_messages feature" do
+        it "should throw error if no options specified" do
+          expect { agency_connector.offline_message }.to raise_error(ComagicClient::ApiError, /Access denied/)
+        end
+
+        it "should return offline messages if all parameters given" do
+          expect(agency_connector.offline_message customer_id: config['accounts']['agency']['customer_id'], site_id: config['accounts']['agency']['site_id'], date_from: config['accounts']['agency']['date_from'], date_till: config['accounts']['agency']['date_till']).to be_a(Array)
+        end
+      end
 
       it "should logout from service" do
         expect(agency_connector.logout).to be_empty
       end
     end
   end
+
+
 
   describe "with invalid credentials" do
     let!(:invalid_connector) do
