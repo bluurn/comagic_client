@@ -8,6 +8,8 @@ end
 
 # This class creates a new comagic connector instanse
 class ComagicClient
+  # version
+  VERSION = '0.0.4'
 
   # Comagic API error class
   class ApiError < StandardError
