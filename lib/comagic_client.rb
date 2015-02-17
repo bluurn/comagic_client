@@ -16,7 +16,7 @@ class ComagicClient
   # Set up a new connector instanse
   def initialize(login, password)
     @session_key = nil
-    @api_url = 'http://api.comagic.ru/api'
+    @api_url = 'http://195.211.120.36/api'
     @login, @password = login, password
   end
 
