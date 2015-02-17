@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'comagic_client'
   s.version = '0.0.4'
-  s.date = '2015-17-02'
+  s.date = '2015-02-17'
   s.summary = 'Comagic API client'
   s.description = 'Comagic API client'
   s.authors = ['Vladimir Suvorov']
