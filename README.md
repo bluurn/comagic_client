@@ -106,19 +106,28 @@
 12) Get person by visitor
 
 ```ruby
+    # for agency accounts:
     puts connector.person_by_visitor customer_id: 31337, id: 777
+    # for customer accounts:
+    puts connector.person_by_visitor id: 777
 ```
 
 13) Get visitors by person
 
 ```ruby
+    # for agency accounts:
     puts connector.visitors_by_person customer_id: 31337, id: 666
+    # for customer accounts:
+    puts connector.visitors_by_person id: 666
 ```
 
 14) Get visitor by id:
 
 ```ruby
+    # for agency accounts:
     puts connector.visitor customer_id: 31337, visitor_id: 777
+    # for customer accounts:
+    puts connector.visitor visitor_id: 777
 ```
 
 15) Get cdr_in by period:
