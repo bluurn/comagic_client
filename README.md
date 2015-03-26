@@ -34,7 +34,7 @@
     # Get all acs with customer_id specified
     puts connector.ac  customer_id: 31337
     # Get all acs with site_id and customer_id specified
-    puts connector.ac site_id: 1337, customer_id: 3l337
+    puts connector.ac site_id: 1337, customer_id: 31337
 ```
 
 4) Get tags:
@@ -50,7 +50,7 @@
 
 ```ruby
     # Get all communications with customer_id, site_id, date_from and date_till
-    puts connector.communication site_id: 1337, customer_id: 3l33t, date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.communication site_id: 1337, customer_id: 31337, date_from: '2014-12-01', date_till: '2014-12-31'
     # Get all communications with site_id, date_from and date_till
     puts connector.communication site_id: 1337, date_from: '2014-12-01', date_till: '2014-12-31'
 ```
