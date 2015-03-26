@@ -101,9 +101,9 @@
 
 ```ruby
     # for agency accounts:
-    puts connector.offline_message
+    puts connector.offline_message site_id: 1337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
     # for customer accounts:
-    puts connector.offline_message customer_id: 31337
+    puts connector.offline_message customer_id: 31337, site_id: 1337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
 ```
 
 12) Get person by visitor
