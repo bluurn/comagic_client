@@ -137,7 +137,6 @@
     data = {}
     data[:args] = { 
       domain: 'example.com',
-      offline_email: 'qw@er.ty', 
       user_phone: '84955555555'
     }
     puts connector.create_site data
