@@ -85,6 +85,9 @@
 9) Get chats:
 
 ```ruby
+    # for agency account:
+    puts connector.chat customer_id: 31337
+    # for customer account:
     puts connector.chat
 ```
 
