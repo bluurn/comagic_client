@@ -50,36 +50,36 @@
 
 ```ruby
     # Get all communications with customer_id, site_id, date_from and date_till
-    puts connector.communication site_id: 1337, customer_id: 31337, date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.communication site_id: 1337, customer_id: 31337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
     # Get all communications with site_id, date_from and date_till
-    puts connector.communication site_id: 1337, date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.communication site_id: 1337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
 ```
 
 6) Get stats:
 
 ```ruby
     # Get stat for site with customer_id, site_id, date_from and date_till
-    puts connector.stat site_id: 1337, customer_id: 31337, date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.stat site_id: 1337, customer_id: 31337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
     # Get stat for site with site_id, date_from and date_till
-    puts connector.stat site_id: 1337, date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.stat site_id: 1337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
 ```
 
 7) Get goals:
 
 ```ruby
     # Get goal for site with customer_id, site_id, date_from and date_till
-    puts connector.goal site_id: 1337, customer_id: 31337, date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.goal site_id: 1337, customer_id: 31337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
     # Get goal for site with site_id, date_from and date_till
-    puts connector.goal site_id: 1337, date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.goal site_id: 1337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
 ```
 
 8) Get calls:
 
 ```ruby
     # Get calls for site with customer_id, date_from and date_till
-    puts connector.call customer_id: 31337, date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.call customer_id: 31337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
     # Get calls for site with date_from and date_till
-    puts connector.call  date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.call  date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
 ```
 
 9) Get chats:
@@ -133,13 +133,13 @@
 15) Get cdr_in by period:
 
 ```ruby
-    puts connector.get_cdr_in date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.get_cdr_in date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
 ```
 
 16) Get cdr_out by period:
 
 ```ruby
-    puts connector.get_cdr_out date_from: '2014-12-01', date_till: '2014-12-31'
+    puts connector.get_cdr_out date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
 ```
 
 17) Create site:
