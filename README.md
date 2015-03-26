@@ -100,7 +100,10 @@
 11) Get offline messages:
 
 ```ruby
+    # for agency accounts:
     puts connector.offline_message
+    # for customer accounts:
+    puts connector.offline_message customer_id: 31337
 ```
 
 12) Get person by visitor
