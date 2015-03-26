@@ -86,9 +86,9 @@
 
 ```ruby
     # for agency account:
-    puts connector.chat customer_id: 31337
+    puts connector.chat customer_id: 31337, site_id: 1337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
     # for customer account:
-    puts connector.chat
+    puts connector.chat site_id: 1337, date_from: '2014-12-01 00:00:00', date_till: '2014-12-31 23:59:59'
 ```
 
 10) Get chat messages:
